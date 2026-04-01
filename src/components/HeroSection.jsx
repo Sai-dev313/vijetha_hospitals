@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, Phone, ChevronDown } from 'lucide-react';
 import heroImg from '../assets/Hospital/WhatsApp-Image-2024-09-29-at-1.29.05-AM-scaled.jpeg';
-import frontFace from '../assets/Hospital/Front_Face.png';
+import frontFace from '../assets/Hospital/Front_Face.jpg';
 import './HeroSection.css';
 
 export default function HeroSection() {
