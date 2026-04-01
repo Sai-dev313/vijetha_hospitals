@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Instagram, Facebook, Clock } from 'lucide-react';
-import logo from '../assets/Second_logo.png';
+import logo from '../assets/Hospital_Telugu_Main_logo.webp';
 import './Footer.css';
 
 export default function Footer() {

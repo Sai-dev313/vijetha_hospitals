@@ -17,7 +17,7 @@
   gap: 48px;
   padding-bottom: 56px;
 }
-.footer__logo { height: 60px; width: auto; margin-bottom: 16px; filter: brightness(0) invert(1); }
+.footer__logo { height: 72px; width: auto; margin-bottom: 16px; filter: brightness(0) invert(1); display: block; }
 .footer__desc { font-size: 0.9rem; line-height: 1.7; color: rgba(178,182,205,0.85); max-width: 280px; }
 .footer__reg { font-size: 0.8rem; color: var(--slate); margin-top: 8px; }
 .footer__socials {
