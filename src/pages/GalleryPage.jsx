@@ -1,6 +1,6 @@
 import React from 'react';
 import GalleryGrid from '../components/GalleryGrid.jsx';
-import heroImg from '../assets/Hospital/Front_Face.png';
+import heroImg from '../assets/Hospital/Front_Face.jpg';
 import './AboutPage.css';
 
 export default function GalleryPage() {
