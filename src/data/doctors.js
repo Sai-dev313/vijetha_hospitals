@@ -1,7 +1,13 @@
 // ============================================================
 // VIJETHA HOSPITAL — Complete Doctor List
-// Extracted from hospital consultant board
 // ============================================================
+
+// ---- Doctor image imports (Vite bundles these for Netlify) ----
+import pavanKumarImg from '../assets/Doctors/Dr. V. Pavan Kumar.webp';
+import venkatReddyImg from '../assets/Doctors/Dr. Venkat Reddy Almareddy.jpg';
+import gowthamRoyImg from '../assets/Doctors/Dr. Gowtham Roy.jpeg';
+import ashokReddyImg from '../assets/Doctors/Dr. Ashok Reddy.jpg';
+import kankanalaImg from '../assets/Doctors/Dr. Kankanala Satish Reddy.jpg';
 
 export const specialties = [
   "All",
@@ -75,7 +81,7 @@ export const rawDoctors = [
     qualifications: "MBBS, MS, DNB",
     designation: "Gastro Intestinal Surgeon",
     type: "Consultant",
-    photo: "/src/assets/Doctors/Dr. V. Pavan Kumar.webp",
+    photo: pavanKumarImg,
   },
   {
     id: 7,
@@ -111,7 +117,7 @@ export const rawDoctors = [
     qualifications: "MS (Ortho), MBA (Health Care)",
     designation: "Fellow in Joint Replacements (Aus.) • Fellow in Shoulder Surgery (USA) • Fellow in Arthroscopy (SIOR)",
     type: "Fulltime",
-    photo: "/src/assets/Doctors/Dr. Venkat Reddy Almareddy.jpg",
+    photo: venkatReddyImg,
   },
   {
     id: 11,
@@ -192,7 +198,7 @@ export const rawDoctors = [
     qualifications: "M.S.",
     designation: "General & Laparoscopic Surgeon",
     type: "Consultant",
-    photo: "/src/assets/Doctors/Dr. Gowtham Roy.jpeg",
+    photo: gowthamRoyImg,
   },
   {
     id: 20,
@@ -228,7 +234,7 @@ export const rawDoctors = [
     qualifications: "MBBS, MD",
     designation: "General Physician",
     type: "Consultant",
-    photo: "/src/assets/Doctors/Dr. Ashok Reddy.jpg",
+    photo: ashokReddyImg,
   },
   {
     id: 24,
@@ -237,7 +243,7 @@ export const rawDoctors = [
     qualifications: "MBBS, MD",
     designation: "General Physician",
     type: "Consultant",
-    photo: "/src/assets/Doctors/Dr. Kankanala Satish Reddy.jpg",
+    photo: kankanalaImg,
   },
 ];
 
