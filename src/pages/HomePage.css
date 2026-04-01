@@ -32,4 +32,20 @@
 }
 .home-appt__form .appt-form__note { color: rgba(255,255,255,0.5); }
 .home-appt__form option { background: var(--navy); color: #fff; }
+
+/* Success state contrast fixes */
+.home-appt__form .appt__success h3 { color: #fff; }
+.home-appt__form .appt__success p { color: rgba(255,255,255,0.7); }
+.home-appt__form .appt__success strong { color: #fff; }
+.home-appt__form .appt-form__divider span { background: transparent; color: rgba(255,255,255,0.5); }
+.home-appt__form .appt-form__divider::before, 
+.home-appt__form .appt-form__divider::after { background: rgba(255,255,255,0.15); }
+.home-appt__form .appt__success .btn-secondary {
+  border-color: rgba(255,255,255,0.4);
+  color: #fff;
+}
+.home-appt__form .appt__success .btn-secondary:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: #fff;
+}
 @media (max-width: 1024px) { .home-appt__inner { grid-template-columns: 1fr; gap: 40px; } }
