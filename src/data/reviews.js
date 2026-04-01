@@ -2,6 +2,20 @@
 // VIJETHA HOSPITAL — Reviews & Specialties Data
 // ============================================================
 
+// ---- Image imports (Vite bundles these correctly for Netlify) ----
+import emergencyImg from '../assets/Services/emergency-critical-care.avif';
+import cardiologyImg from '../assets/Services/cardiology.jpg';
+import orthopaedicsImg from '../assets/Services/orthopaedics.png';
+import gastroImg from '../assets/Services/gastroenterology.jpg';
+import neurologyImg from '../assets/Services/neurology.avif';
+import gynaeImg from '../assets/Services/gynaecology.jpg';
+import nephrologyImg from '../assets/Services/nephrology.png';
+import urologyImg from '../assets/Services/urology.png';
+import generalSurgImg from '../assets/Services/general-surgery.jpg';
+import paediatricsImg from '../assets/Services/paediatrics.jpg';
+import entImg from '../assets/Services/ent.png';
+import anaesthImg from '../assets/Services/anaesthesiology.avif';
+
 export const reviews = [
   {
     id: 1,
@@ -54,73 +68,73 @@ export const specialties = [
   {
     id: 1,
     name: "Emergency & Critical Care",
-    image: "/src/assets/Services/emergency-critical-care.avif",
+    image: emergencyImg,
     description: "24/7 emergency services with state-of-the-art ICU and critical care facilities.",
   },
   {
     id: 2,
     name: "Cardiology",
-    image: "/src/assets/Services/cardiology.jpg",
+    image: cardiologyImg,
     description: "Comprehensive heart care including 2D ECHO, ECG, and specialist consultations.",
   },
   {
     id: 3,
     name: "Orthopaedics",
-    image: "/src/assets/Services/orthopaedics.png",
+    image: orthopaedicsImg,
     description: "Expert joint replacement, shoulder surgery, and arthroscopy by fellowship-trained surgeons.",
   },
   {
     id: 4,
     name: "Gastroenterology",
-    image: "/src/assets/Services/gastroenterology.jpg",
+    image: gastroImg,
     description: "Advanced digestive care from AIG-affiliated gastroenterologists and surgeons.",
   },
   {
     id: 5,
     name: "Neurology",
-    image: "/src/assets/Services/neurology.avif",
+    image: neurologyImg,
     description: "Expert neurology and neurosurgery for complex brain and spine conditions.",
   },
   {
     id: 6,
     name: "Gynaecology",
-    image: "/src/assets/Services/gynaecology.jpg",
+    image: gynaeImg,
     description: "Comprehensive women's health care, obstetrics, and gynaecological services.",
   },
   {
     id: 7,
     name: "Nephrology",
-    image: "/src/assets/Services/nephrology.png",
+    image: nephrologyImg,
     description: "Specialized kidney care, dialysis support, and nephrology consultations.",
   },
   {
     id: 8,
     name: "Urology",
-    image: "/src/assets/Services/urology.png",
+    image: urologyImg,
     description: "Minimally invasive urological procedures and surgical expertise.",
   },
   {
     id: 9,
     name: "General Surgery",
-    image: "/src/assets/Services/general-surgery.jpg",
+    image: generalSurgImg,
     description: "Advanced laparoscopic and general surgical procedures with precision.",
   },
   {
     id: 10,
     name: "Paediatrics",
-    image: "/src/assets/Services/paediatrics.jpg",
+    image: paediatricsImg,
     description: "Dedicated child care with paediatric gastroenterology and general paediatrics.",
   },
   {
     id: 11,
     name: "ENT",
-    image: "/src/assets/Services/ent.png",
+    image: entImg,
     description: "Ear, nose, and throat care for all ages by experienced specialists.",
   },
   {
     id: 12,
     name: "Anaesthesiology",
-    image: "/src/assets/Services/anaesthesiology.avif",
+    image: anaesthImg,
     description: "Safe and expert anaesthesia services for surgical and critical care settings.",
   },
 ];
