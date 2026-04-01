@@ -5,10 +5,18 @@ import './TariffsSection.css';
 
 export default function TariffsSection() {
   const [activeCategory, setActiveCategory] = useState('All');
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleCategoryChange = (c) => {
+    setActiveCategory(c);
+    setIsExpanded(false);
+  };
 
   const filtered = activeCategory === 'All'
     ? tariffs
     : tariffs.filter((t) => t.category === activeCategory);
+
+  const displayed = isExpanded ? filtered : filtered.slice(0, 5);
 
   return (
     <section className="tariffs section-pad" style={{ background: 'var(--bg-section)' }}>
@@ -29,7 +37,7 @@ export default function TariffsSection() {
             <button
               key={c}
               className={`tariffs__filter ${activeCategory === c ? 'active' : ''}`}
-              onClick={() => setActiveCategory(c)}
+              onClick={() => handleCategoryChange(c)}
             >
               {c}
             </button>
@@ -49,7 +57,7 @@ export default function TariffsSection() {
               </tr>
             </thead>
             <tbody>
-              {filtered.map((t, i) => (
+              {displayed.map((t, i) => (
                 <tr key={i}>
                   <td className="tariffs__num">{i + 1}</td>
                   <td className="tariffs__item">{t.item}</td>
@@ -61,6 +69,17 @@ export default function TariffsSection() {
             </tbody>
           </table>
         </div>
+
+        {filtered.length > 5 && (
+          <div style={{ textAlign: 'center', marginTop: 24, marginBottom: 24 }}>
+            <button 
+              className="btn-secondary" 
+              onClick={() => setIsExpanded(!isExpanded)}
+            >
+              {isExpanded ? 'Show Less' : `View All Prices (${filtered.length})`}
+            </button>
+          </div>
+        )}
 
         {/* Important note */}
         <div className="tariffs__important">

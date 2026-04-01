@@ -3,12 +3,14 @@ import { Search, Filter } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import DoctorCard from './DoctorCard.jsx';
+import DoctorModal from './DoctorModal.jsx';
 import { doctors, specialties } from '../data/doctors.js';
 import './DoctorsSection.css';
 
 export default function DoctorsSection({ preview = false }) {
   const [search, setSearch] = useState('');
   const [activeSpec, setActiveSpec] = useState('All');
+  const [selectedDoctor, setSelectedDoctor] = useState(null);
 
   const filtered = doctors.filter((d) => {
     const matchSpec = activeSpec === 'All' || d.specialty === activeSpec;
@@ -19,7 +21,7 @@ export default function DoctorsSection({ preview = false }) {
     return matchSpec && matchSearch;
   });
 
-  const displayed = preview ? filtered.slice(0, 8) : filtered;
+  const displayed = preview ? filtered.slice(0, 4) : filtered;
 
   return (
     <section className="doctors-sec section-pad">
@@ -67,7 +69,7 @@ export default function DoctorsSection({ preview = false }) {
         {displayed.length > 0 ? (
           <div className="doctors-sec__grid">
             {displayed.map((d) => (
-              <DoctorCard key={d.id} doctor={d} />
+              <DoctorCard key={d.id} doctor={d} onClick={() => setSelectedDoctor(d)} />
             ))}
           </div>
         ) : (
@@ -77,7 +79,7 @@ export default function DoctorsSection({ preview = false }) {
           </div>
         )}
 
-        {preview && filtered.length > 8 && (
+        {preview && filtered.length > 4 && (
           <div style={{ textAlign: 'center', marginTop: 40 }}>
             <Link to="/doctors" className="btn-primary">
               View All {filtered.length} Doctors <ArrowRight size={16} />
@@ -85,6 +87,10 @@ export default function DoctorsSection({ preview = false }) {
           </div>
         )}
       </div>
+
+      {selectedDoctor && (
+        <DoctorModal doctor={selectedDoctor} onClose={() => setSelectedDoctor(null)} />
+      )}
     </section>
   );
 }

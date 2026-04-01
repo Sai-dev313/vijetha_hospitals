@@ -28,9 +28,9 @@ export default function HeroSection() {
               <Calendar size={18} />
               Book Appointment
             </Link>
-            <a href="tel:+918019414878" className="btn-outline-light">
+            <a href="tel:+919866055322" className="btn-outline-light">
               <Phone size={18} />
-              80194 14878
+              98660 55322
             </a>
           </div>
           <div className="hero__stats">

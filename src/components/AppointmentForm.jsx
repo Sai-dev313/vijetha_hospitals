@@ -22,7 +22,7 @@ export default function AppointmentForm({ compact = false }) {
         <CheckCircle size={48} />
         <h3>Appointment Request Sent!</h3>
         <p>We'll call you back within 30 minutes to confirm your appointment.</p>
-        <p style={{ marginTop: 6 }}>For emergencies call: <a href="tel:+918019414878">80194 14878</a></p>
+        <p style={{ marginTop: 6 }}>For emergencies call: <a href="tel:+919866055322">98660 55322</a></p>
       </div>
     );
   }

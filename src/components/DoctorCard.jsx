@@ -2,9 +2,9 @@ import React from 'react';
 import { User } from 'lucide-react';
 import './DoctorCard.css';
 
-export default function DoctorCard({ doctor }) {
+export default function DoctorCard({ doctor, onClick }) {
   return (
-    <div className="doc-card">
+    <div className="doc-card" onClick={onClick} style={{ cursor: onClick ? 'pointer' : 'default' }}>
       <div className="doc-card__photo-wrap">
         {doctor.photo ? (
           <img src={doctor.photo} alt={doctor.name} className="doc-card__photo" />

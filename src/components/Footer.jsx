@@ -59,16 +59,20 @@ export default function Footer() {
           <h4 className="footer__col-title">Contact Us</h4>
           <ul className="footer__contact-list">
             <li>
-              <MapPin size={16} />
-              <span>Vijetha Hospital, Karimnagar, Telangana</span>
+              <MapPin size={16} style={{ flexShrink: 0, marginTop: 4 }} />
+              <span>Beside HDFC Bank, Karimnagar 505001</span>
             </li>
-            <li>
-              <Phone size={16} />
-              <a href="tel:+918019414878">+91 80194 14878</a>
+            <li style={{ alignItems: 'flex-start' }}>
+              <Phone size={16} style={{ marginTop: 4 }} />
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <a href="tel:+919866055322">+91 98660 55322</a>
+                <a href="tel:+918871080108">+91 88710 80108</a>
+                <a href="tel:+919666596108">+91 96665 96108</a>
+              </div>
             </li>
             <li>
               <Mail size={16} />
-              <a href="mailto:info@vijethahospitalknr.com">info@vijethahospitalknr.com</a>
+              <a href="mailto:vijethahospitalknr@gmail.com">vijethahospitalknr@gmail.com</a>
             </li>
             <li>
               <Clock size={16} />

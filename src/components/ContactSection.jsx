@@ -15,9 +15,9 @@ export default function ContactSection() {
   };
 
   const contactInfo = [
-    { icon: <MapPin size={20} />, label: 'Address', value: 'Vijetha Hospital, Karimnagar, Telangana' },
-    { icon: <Phone size={20} />, label: 'Emergency', value: '+91 80194 14878', href: 'tel:+918019414878' },
-    { icon: <Mail size={20} />, label: 'Email', value: 'info@vijethahospitalknr.com', href: 'mailto:info@vijethahospitalknr.com' },
+    { icon: <MapPin size={20} />, label: 'Address', value: 'Beside HDFC Bank, Karimnagar 505001' },
+    { icon: <Phone size={20} />, label: 'Helpline', value: '+91 98660 55322 / 88710 80108 / 96665 96108', href: 'tel:+919866055322' },
+    { icon: <Mail size={20} />, label: 'Email', value: 'vijethahospitalknr@gmail.com', href: 'mailto:vijethahospitalknr@gmail.com' },
     { icon: <Clock size={20} />, label: 'Emergency Services', value: 'Open 24 Hours, 7 Days' },
   ];
 

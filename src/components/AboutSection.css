@@ -101,9 +101,16 @@
   color: var(--slate);
 }
 @media (max-width: 1024px) {
-  .about__inner { grid-template-columns: 1fr; gap: 48px; }
-  .about__images { height: 360px; }
+  .about__inner { grid-template-columns: 1fr; gap: 64px; }
+  .about__images { height: 420px; }
+  .about__img-main { height: 340px; }
+  .about__img-secondary { height: 200px; }
 }
 @media (max-width: 640px) {
-  .about__images { height: 280px; }
+  .about__inner { gap: 48px; }
+  .about__images { height: 340px; }
+  .about__img-main { height: 260px; }
+  .about__img-secondary { height: 160px; }
+  .about__img-badge { top: -12px; left: -12px; padding: 10px 14px; }
+  .about__badge-num { font-size: 1.2rem; }
 }

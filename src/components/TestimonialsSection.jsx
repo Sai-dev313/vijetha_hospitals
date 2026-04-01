@@ -37,23 +37,25 @@ export default function TestimonialsSection() {
           </div>
         </div>
 
-        {/* Cards grid */}
-        <div className="testimonials__grid">
-          {reviews.map((r) => (
-            <div className="testimonials__card" key={r.id}>
-              <StarRating rating={r.rating} />
-              <p className="testimonials__text">"{r.text}"</p>
-              <div className="testimonials__author">
-                <div className="testimonials__avatar">
-                  {r.author.charAt(0)}
-                </div>
-                <div>
-                  <strong>{r.author}</strong>
-                  <span>{r.date}</span>
+        {/* Marquee Container */}
+        <div className="testimonials__marquee-wrapper">
+          <div className="testimonials__marquee">
+            {[...reviews, ...reviews].map((r, index) => (
+              <div className="testimonials__card" key={`${r.id}-${index}`}>
+                <StarRating rating={r.rating} />
+                <p className="testimonials__text">"{r.text}"</p>
+                <div className="testimonials__author">
+                  <div className="testimonials__avatar">
+                    {r.author.charAt(0)}
+                  </div>
+                  <div>
+                    <strong>{r.author}</strong>
+                    <span>{r.date}</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         <div className="testimonials__note">

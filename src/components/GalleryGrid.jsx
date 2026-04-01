@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, ZoomIn } from 'lucide-react';
 import './GalleryGrid.css';
 
@@ -37,19 +37,42 @@ const galleryImages = [
 
 export default function GalleryGrid({ preview = false }) {
   const [lightbox, setLightbox] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const images = preview ? galleryImages.slice(0, 9) : galleryImages;
+
+  useEffect(() => {
+    // Determine timer interval - 3 seconds
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [images.length]);
 
   return (
     <>
-      <div className="gallery-grid">
-        {images.map((img, i) => (
-          <div className="gallery-grid__item" key={i} onClick={() => setLightbox(i)}>
-            <img src={img.src} alt={img.alt} loading="lazy" />
-            <div className="gallery-grid__overlay">
-              <ZoomIn size={28} />
+      <div className="gallery-slideshow">
+        <div className="gallery-slideshow__track" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+          {images.map((img, i) => (
+            <div className="gallery-slideshow__slide" key={i} onClick={() => setLightbox(i)}>
+              <img src={img.src} alt={img.alt} loading="lazy" />
+              <div className="gallery-slideshow__overlay">
+                <ZoomIn size={48} />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        
+        <div className="gallery-slideshow__dots">
+          {images.map((_, i) => (
+            <button 
+              key={i} 
+              className={`gallery-slideshow__dot ${i === currentIndex ? 'active' : ''}`}
+              onClick={() => setCurrentIndex(i)}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
+        </div>
       </div>
 
       {/* Lightbox */}

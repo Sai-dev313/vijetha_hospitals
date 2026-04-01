@@ -1,25 +1,35 @@
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-}
-.gallery-grid__item {
+.gallery-slideshow {
   position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  aspect-ratio: 4/3;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 16/9;
+  background: #000;
 }
-.gallery-grid__item img {
+.gallery-slideshow__track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.gallery-slideshow__slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+.gallery-slideshow__slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: opacity 0.4s ease;
 }
-.gallery-grid__overlay {
+.gallery-slideshow__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(5,14,71,0.55);
+  background: rgba(5,14,71,0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,8 +37,36 @@
   transition: opacity var(--transition);
   color: #fff;
 }
-.gallery-grid__item:hover img { transform: scale(1.08); }
-.gallery-grid__item:hover .gallery-grid__overlay { opacity: 1; }
+.gallery-slideshow__slide:hover .gallery-slideshow__overlay {
+  opacity: 1;
+}
+.gallery-slideshow__dots {
+  position: absolute;
+  bottom: 24px;
+  left: 0; right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 10;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+.gallery-slideshow__dot {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+  padding: 0;
+}
+.gallery-slideshow__dot.active {
+  background: #fff;
+  transform: scale(1.3);
+}
+.gallery-slideshow__dot:hover {
+  background: rgba(255,255,255,0.8);
+}
 
 /* Lightbox */
 .gallery-lightbox {
@@ -68,5 +106,13 @@
 .gallery-lightbox__close:hover { background: var(--orange); }
 .gallery-lightbox__caption { color: rgba(255,255,255,0.6); font-size: 0.87rem; margin-top: 16px; }
 
-@media (max-width: 768px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px) { .gallery-grid { grid-template-columns: 1fr; } }
+@media (max-width: 768px) {
+  .gallery-slideshow {
+    aspect-ratio: 4/3;
+  }
+}
+@media (max-width: 480px) {
+  .gallery-slideshow {
+    aspect-ratio: 1/1;
+  }
+}

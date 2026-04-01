@@ -10,6 +10,8 @@ import DoctorsPage from './pages/DoctorsPage.jsx';
 import GalleryPage from './pages/GalleryPage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
 import AppointmentPage from './pages/AppointmentPage.jsx';
+import LanguageSwitcher from './components/LanguageSwitcher.jsx';
+import FloatingSocials from './components/FloatingSocials.jsx';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -32,6 +34,8 @@ function Layout() {
         <Route path="/appointment" element={<AppointmentPage />} />
       </Routes>
       <Footer />
+      <LanguageSwitcher />
+      <FloatingSocials />
     </>
   );
 }

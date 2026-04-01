@@ -35,6 +35,11 @@ export default function Navbar() {
           </div>
         </Link>
 
+        {/* Mobile Title */}
+        <div className="navbar__mobile-title">
+          విజేత హాస్పిటల్స్
+        </div>
+
         {/* Desktop nav */}
         <nav className="navbar__links">
           {navLinks.map(({ path, label }) => (
@@ -53,9 +58,9 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="navbar__actions">
-          <a href="tel:+918019414878" className="navbar__phone">
+          <a href="tel:+919866055322" className="navbar__phone">
             <Phone size={15} />
-            80194 14878
+            98660 55322
           </a>
           <Link to="/appointment" className="btn-primary navbar__cta">
             <Calendar size={16} />

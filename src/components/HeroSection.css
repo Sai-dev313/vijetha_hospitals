@@ -144,7 +144,13 @@
 }
 
 @media (max-width: 1024px) {
-  .hero__inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero {
+    min-height: auto;
+    padding-top: 120px;
+    padding-bottom: 60px;
+    align-items: flex-start;
+  }
+  .hero__inner { grid-template-columns: 1fr; gap: 40px; padding-top: 20px; }
   .hero__image-wrap { display: none; }
   .hero__content { text-align: center; }
   .hero__subtitle { margin: 0 auto 36px; }

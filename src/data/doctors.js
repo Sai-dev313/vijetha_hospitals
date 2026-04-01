@@ -22,7 +22,7 @@ export const specialties = [
   "Anaesthesiology",
 ];
 
-export const doctors = [
+export const rawDoctors = [
   {
     id: 1,
     name: "Dr. K. Sathish Reddy",
@@ -75,7 +75,7 @@ export const doctors = [
     qualifications: "MBBS, MS, DNB",
     designation: "Gastro Intestinal Surgeon",
     type: "Consultant",
-    photo: null,
+    photo: "/src/assets/Doctors/Dr. V. Pavan Kumar.webp",
   },
   {
     id: 7,
@@ -111,7 +111,7 @@ export const doctors = [
     qualifications: "MS (Ortho), MBA (Health Care)",
     designation: "Fellow in Joint Replacements (Aus.) • Fellow in Shoulder Surgery (USA) • Fellow in Arthroscopy (SIOR)",
     type: "Fulltime",
-    photo: null,
+    photo: "/src/assets/Doctors/Dr. Venkat Reddy Almareddy.jpg",
   },
   {
     id: 11,
@@ -240,5 +240,7 @@ export const doctors = [
     photo: "/src/assets/Doctors/Dr. Kankanala Satish Reddy.jpg",
   },
 ];
+
+export const doctors = [...rawDoctors].sort((a,b) => (a.photo ? 0 : 1) - (b.photo ? 0 : 1));
 
 export default doctors;

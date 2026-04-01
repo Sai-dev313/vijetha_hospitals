@@ -48,7 +48,7 @@ export default function AppointmentPage() {
             </div>
             <div className="appt-page__emergency">
               <strong>🚨 Emergency?</strong>
-              <p>Call us immediately at <a href="tel:+918019414878">+91 80194 14878</a> — available 24/7</p>
+              <p>Call us immediately at <a href="tel:+919866055322">+91 98660 55322</a> — available 24/7</p>
             </div>
           </div>
           <div className="appt-page__form-wrap">

@@ -23,7 +23,9 @@ export default function SpecialtiesPage() {
           <div className="specs-page__grid">
             {specialties.map((s) => (
               <div className="specs-page__card" key={s.id}>
-                <div className="specs-page__icon">{s.icon}</div>
+                <div className="specs-page__img-wrap">
+                  <img src={s.image} alt={s.name} className="specs-page__img" />
+                </div>
                 <div className="specs-page__content">
                   <h3>{s.name}</h3>
                   <p>{s.description}</p>

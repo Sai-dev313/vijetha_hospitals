@@ -1,0 +1,65 @@
+.floating-socials {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9998; /* Just below translate button if they overlap */
+}
+
+.floating-socials__btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(5, 14, 71, 0.2);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  text-decoration: none;
+  animation: pulseRotate 4s infinite;
+}
+
+@keyframes pulseRotate {
+  0% { transform: scale(1) rotate(0deg); box-shadow: 0 0 0 0 rgba(0,0,0,0.2); }
+  5% { transform: scale(1.1) rotate(5deg); }
+  10% { transform: scale(1) rotate(0deg); box-shadow: 0 0 0 10px rgba(0,0,0,0); }
+  100% { transform: scale(1) rotate(0deg); box-shadow: 0 0 0 0 rgba(0,0,0,0); }
+}
+
+.floating-socials__btn--whatsapp {
+  background: #25D366;
+  animation-delay: 0s;
+}
+
+.floating-socials__btn--instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  animation-delay: 1.3s;
+}
+
+.floating-socials__btn--facebook {
+  background: #1877F2;
+  animation-delay: 2.6s;
+}
+
+.floating-socials__btn:hover {
+  transform: scale(1.15) !important;
+  box-shadow: 0 8px 24px rgba(5, 14, 71, 0.3);
+  animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+  .floating-socials {
+    bottom: 20px;
+    left: 16px;
+    gap: 10px;
+  }
+  .floating-socials__btn {
+    width: 44px;
+    height: 44px;
+  }
+}
