@@ -54,7 +54,8 @@ export default function ContactSection() {
           <div className="contact__map">
             <iframe
               title="Vijetha Hospital Location"
-              src="https://maps.google.com/maps?q=Karimnagar,+Telangana,+India&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.8834486950886!2d79.12624557582761!3d18.443600282635153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bccd948ed25a769%3A0xbee27120a89772f2!2sVIJETHA%20HOSPITAL!5e0!3m2!1sen!2sin!4v1775049308812!5m2!1sen!2sin"
+              referrerPolicy="no-referrer-when-downgrade"
               loading="lazy"
               allowFullScreen
             />
