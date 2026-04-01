@@ -1,0 +1,75 @@
+.tariffs__header { margin-bottom: 40px; }
+.tariffs__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.tariffs__filter {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  color: var(--slate);
+  border-radius: var(--radius-full);
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+.tariffs__filter:hover, .tariffs__filter.active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+.tariffs__table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+}
+.tariffs__table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+.tariffs__table thead { background: var(--dark-navy); color: #fff; }
+.tariffs__table th {
+  padding: 14px 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: left;
+  white-space: nowrap;
+}
+.tariffs__table tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background var(--transition);
+}
+.tariffs__table tbody tr:hover { background: rgba(240,102,33,0.04); }
+.tariffs__table td { padding: 13px 20px; font-size: 0.9rem; color: var(--text-body); }
+.tariffs__num { color: var(--slate); font-weight: 600; width: 40px; }
+.tariffs__item { font-weight: 500; color: var(--navy); }
+.tariffs__cat-badge {
+  background: rgba(88,96,142,0.1);
+  color: var(--slate);
+  border-radius: var(--radius-full);
+  padding: 3px 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.tariffs__charge { font-weight: 700; color: var(--orange); font-size: 0.95rem; white-space: nowrap; }
+.tariffs__note-cell { font-size: 0.82rem; color: var(--text-muted); }
+.tariffs__important {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(240,102,33,0.08);
+  border: 1.5px solid rgba(240,102,33,0.25);
+  border-radius: var(--radius-md);
+  padding: 16px 24px;
+  margin-top: 24px;
+  color: var(--navy);
+}
+.tariffs__important svg { color: var(--orange); flex-shrink: 0; }

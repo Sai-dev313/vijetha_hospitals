@@ -1,0 +1,35 @@
+.home-appt {
+  background: linear-gradient(135deg, var(--dark-navy) 0%, var(--navy) 100%);
+}
+.home-appt__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+.home-appt__form {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+}
+.home-appt__form .appt-form__field label { color: rgba(255,255,255,0.85); }
+.home-appt__form .appt-form__field input,
+.home-appt__form .appt-form__field textarea,
+.home-appt__form .appt-form__field select {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.2);
+  color: #fff;
+}
+.home-appt__form .appt-form__field input::placeholder,
+.home-appt__form .appt-form__field textarea::placeholder { color: rgba(255,255,255,0.4); }
+.home-appt__form .appt-form__field input:focus,
+.home-appt__form .appt-form__field textarea:focus,
+.home-appt__form .appt-form__field select:focus {
+  border-color: var(--peach);
+  box-shadow: 0 0 0 3px rgba(236,171,134,0.2);
+}
+.home-appt__form .appt-form__note { color: rgba(255,255,255,0.5); }
+.home-appt__form option { background: var(--navy); color: #fff; }
+@media (max-width: 1024px) { .home-appt__inner { grid-template-columns: 1fr; gap: 40px; } }

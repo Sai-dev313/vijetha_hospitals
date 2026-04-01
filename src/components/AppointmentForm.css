@@ -1,0 +1,62 @@
+.appt-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.appt-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.appt-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.appt-form__field label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+.appt-form__field input,
+.appt-form__field textarea,
+.appt-form__field select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.93rem;
+  font-family: var(--font-body);
+  color: var(--text-body);
+  background: #fff;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  outline: none;
+}
+.appt-form__field input:focus,
+.appt-form__field textarea:focus,
+.appt-form__field select:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(240,102,33,0.12);
+}
+.appt-form__field textarea { resize: vertical; min-height: 80px; }
+.appt-form__select-wrap { position: relative; }
+.appt-form__select-wrap select { appearance: none; cursor: pointer; }
+.appt-form__submit { width: 100%; justify-content: center; padding: 16px; font-size: 1rem; margin-top: 4px; }
+.appt-form__note { font-size: 0.8rem; color: var(--slate); text-align: center; }
+.appt__success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--navy);
+}
+.appt__success svg { color: #22c55e; }
+.appt__success h3 { font-family: var(--font-head); font-size: 1.5rem; }
+.appt__success p { color: var(--slate); }
+.appt__success a { color: var(--orange); font-weight: 600; }
+@media (max-width: 640px) { .appt-form__row { grid-template-columns: 1fr; } }
